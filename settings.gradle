@@ -1,7 +1,7 @@
 /*
- * ProjectTemplate
+ * Fibonacci
  *
- * Created by artembirmin on 3/11/2022.
+ * Created by artembirmin on 7/11/2022.
  */
 
 pluginManagement {
@@ -22,5 +22,5 @@ dependencyResolutionManagement {
         jcenter()
     }
 }
-rootProject.name = "projecttemplate"
+rootProject.name = "fibonacci"
 include ':app'

@@ -1,7 +1,7 @@
 /*
- * ProjectTemplate
+ * Fibonacci
  *
- * Created by artembirmin on 3/11/2022.
+ * Created by artembirmin on 7/11/2022.
  */
 
 plugins {
@@ -45,15 +45,15 @@ android {
 
         dev {
             applicationIdSuffix '.dev'
-            resValue 'string', 'app_name', 'ProjectTemplate dev'
-            buildConfigField 'String', 'DB_NAME', '"template.db.dev"'
+            resValue 'string', 'app_name', 'Fibonacci dev'
+            buildConfigField 'String', 'DB_NAME', '"fibonacci.db.dev"'
             buildConfigField 'String', 'SERVER_URL', '"http://abracadabra/api/"'
         }
 
         prod {
-            resValue 'string', 'app_name', 'ProjectTemplate'
+            resValue 'string', 'app_name', 'Fibonacci'
             buildConfigField 'String', 'SERVER_URL', '"http://abracadabra/api/"'
-            buildConfigField 'String', 'DB_NAME', '"template.db"'
+            buildConfigField 'String', 'DB_NAME', '"fibonacci.db"'
         }
     }
 
@@ -64,7 +64,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    namespace 'com.incetro.projecttemplate'
+    namespace 'com.incetro.fibonacci'
 }
 
 dependencies {
