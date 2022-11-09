@@ -4,13 +4,13 @@
  * Created by artembirmin on 7/11/2022.
  */
 
-package com.incetro.fibonacci.presentation.userstory.counter.di
+package com.incetro.fibonacci.presentation.userstory.fibonaccicounter.di
 
 import com.incetro.fibonacci.common.di.activity.ActivityComponent
 import com.incetro.fibonacci.common.di.componentmanager.ComponentManager
 import com.incetro.fibonacci.common.di.componentmanager.ComponentsManager
 import com.incetro.fibonacci.common.di.scope.FeatureScope
-import com.incetro.fibonacci.presentation.userstory.counter.CounterFragment
+import com.incetro.fibonacci.presentation.userstory.fibonaccicounter.counter.CounterFragment
 import dagger.Component
 
 @FeatureScope
@@ -34,7 +34,7 @@ interface CounterComponent {
         createAndSave = {
             val componentManager = ComponentsManager.getInstance()
             val activityComponent = ActivityComponent.Manager.getComponent()
-            val component = DaggerDemoComponent.builder()
+            val component = DaggerCounterComponent.builder()
                 .activityComponent(activityComponent)
                 .build()
             componentManager.addComponent(component)

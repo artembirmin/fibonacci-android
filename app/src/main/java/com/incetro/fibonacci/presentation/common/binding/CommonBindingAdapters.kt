@@ -4,7 +4,7 @@
  * Created by artembirmin on 7/11/2022.
  */
 
-package com.incetro.fibonacci.presentation.base.binding
+package com.incetro.fibonacci.presentation.common.binding
 
 import android.view.View
 import androidx.databinding.BindingAdapter

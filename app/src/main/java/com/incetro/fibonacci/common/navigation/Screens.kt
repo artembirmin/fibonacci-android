@@ -9,7 +9,7 @@
 package com.incetro.fibonacci.common.navigation
 
 import com.github.terrakok.cicerone.androidx.FragmentScreen
-import com.incetro.fibonacci.presentation.userstory.counter.CounterFragment
+import com.incetro.fibonacci.presentation.userstory.fibonaccicounter.counter.CounterFragment
 
 /**
  * App screens for navigation with Cicerone.
