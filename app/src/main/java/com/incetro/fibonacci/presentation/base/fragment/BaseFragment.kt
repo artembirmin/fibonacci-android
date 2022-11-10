@@ -78,11 +78,6 @@ abstract class BaseFragment<Binding : ViewDataBinding> : MvpAppCompatFragment(),
         return binding.root
     }
 
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
-
     override fun onResume() {
         super.onResume()
         isInstanceStateSaved = false
