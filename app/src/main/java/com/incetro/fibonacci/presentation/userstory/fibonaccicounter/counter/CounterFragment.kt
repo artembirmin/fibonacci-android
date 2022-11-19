@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.view.View
 import com.incetro.fibonacci.R
 import com.incetro.fibonacci.databinding.FragmentCounterBinding
+import com.incetro.fibonacci.entity.fibonaccicounter.CounterInfo
 import com.incetro.fibonacci.presentation.base.fragment.BaseFragment
 import com.incetro.fibonacci.presentation.userstory.fibonaccicounter.di.CounterComponent
 import moxy.presenter.InjectPresenter
@@ -37,7 +38,20 @@ class CounterFragment : BaseFragment<FragmentCounterBinding>(), CounterView {
 
     private fun initViews() {
         with(binding) {
+            btnIncrement.setOnClickListener { presenter.onIncrementClick() }
+            btnDecrement.setOnClickListener { presenter.onDecrementClick() }
+        }
+    }
 
+
+    override fun showCounter(counterInfo: CounterInfo) {
+        with(binding) {
+            tvCounter.text = counterInfo.counter.toString()
+
+            val fibStatusResId =
+                if (counterInfo.isFibonacci) R.string.agreement
+                else R.string.disagreement
+            tvFib.setText(fibStatusResId)
         }
     }
 
@@ -48,4 +62,6 @@ class CounterFragment : BaseFragment<FragmentCounterBinding>(), CounterView {
     companion object {
         fun newInstance() = CounterFragment()
     }
+
+
 }
