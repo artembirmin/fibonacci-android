@@ -5,7 +5,11 @@
   -->
 
 <resources>
+    <string name="status_fib">Fibonacci status</string>
+    <string name="minus">—</string>
+    <string name="plus">+</string>
     <string name="alert_button_ok">Ok</string>
     <string name="counter_title">Counter</string>
-    <string name="demo_hello_world">Hello world</string>
+    <string name="agreement">Yes</string>
+    <string name="disagreement">Not</string>
 </resources>
