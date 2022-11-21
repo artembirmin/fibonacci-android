@@ -101,5 +101,17 @@
             app:layout_constraintStart_toStartOf="@id/btnDecrement"
             tools:text="Yes" />
 
+        <Button
+            android:id="@+id/btnStatistic"
+            android:layout_width="100dp"
+            android:layout_height="46dp"
+            android:text="@string/statistic"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCounter"
+            app:layout_constraintEnd_toStartOf="@+id/tvFib"
+            app:layout_constraintHorizontal_bias="0.184"
+            app:layout_constraintStart_toEndOf="@+id/tvFibTitle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.501" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
