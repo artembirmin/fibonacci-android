@@ -48,10 +48,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
-            android:layout_marginTop="24dp"
             android:textAppearance="@style/Text18Black"
             app:layout_constraintStart_toEndOf="@+id/tvCountPressing"
-            app:layout_constraintTop_toBottomOf="@+id/appbar"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvCountPressing"
             tools:text="1256" />
 
         <TextView
@@ -74,7 +73,7 @@
             android:layout_marginTop="106dp"
             android:textAppearance="@style/Text18Black"
             app:layout_constraintStart_toEndOf="@+id/tvMin"
-            app:layout_constraintTop_toBottomOf="@+id/tvCountPressing"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvMin"
             tools:text="-25" />
 
         <TextView
@@ -82,22 +81,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="212dp"
+            android:layout_marginTop="80dp"
             android:gravity="center"
             android:text="@string/maximum"
             android:textAppearance="@style/Text18Black.Medium"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvCountPressing" />
+            app:layout_constraintTop_toBottomOf="@+id/tvMin" />
 
         <TextView
             android:id="@+id/tvMaxValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="65dp"
-            android:layout_marginTop="212dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="80dp"
             android:textAppearance="@style/Text18Black"
             app:layout_constraintStart_toEndOf="@+id/tvMax"
-            app:layout_constraintTop_toBottomOf="@+id/tvCountPressing"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvMax"
             tools:text="131" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

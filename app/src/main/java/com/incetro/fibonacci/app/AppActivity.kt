@@ -36,6 +36,7 @@ class AppActivity : AppCompatActivity() {
 
     private val compositeDisposable = CompositeDisposable()
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         inject()
         super.onCreate(savedInstanceState)
@@ -76,4 +77,5 @@ class AppActivity : AppCompatActivity() {
         compositeDisposable.add(this)
         return this
     }
+
 }

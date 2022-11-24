@@ -7,5 +7,7 @@ interface CounterRepository {
     fun observeCounter(): Observable<Int>
     fun incrementCounter(): Completable
     fun decrementCounter(): Completable
-
+    fun counterOfPressing(): Completable
+    fun max(): Completable
+    fun min(): Completable
 }

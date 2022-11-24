@@ -12,7 +12,7 @@ import com.incetro.fibonacci.R
 import com.incetro.fibonacci.databinding.FragmentCounterBinding
 import com.incetro.fibonacci.entity.fibonaccicounter.CounterInfo
 import com.incetro.fibonacci.presentation.base.fragment.BaseFragment
-import com.incetro.fibonacci.presentation.userstory.fibonaccicounter.di.CounterComponent
+import com.incetro.fibonacci.presentation.userstory.fibonaccicounter.di.counter.CounterComponent
 import moxy.presenter.InjectPresenter
 import moxy.presenter.ProvidePresenter
 import javax.inject.Inject
@@ -43,6 +43,9 @@ class CounterFragment : BaseFragment<FragmentCounterBinding>(), CounterView {
         }
     }
 
+    private fun showStatistic() {
+        binding.btnStatistic.setOnClickListener({ presenter })
+    }
 
     override fun showCounter(counterInfo: CounterInfo) {
         with(binding) {

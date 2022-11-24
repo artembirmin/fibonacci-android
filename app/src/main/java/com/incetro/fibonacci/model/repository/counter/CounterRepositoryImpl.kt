@@ -29,5 +29,17 @@ class CounterRepositoryImpl @Inject constructor() : CounterRepository {
         }
     }
 
+    override fun counterOfPressing(): Completable {
+        TODO("Not yet implemented")
+    }
+
+    override fun max(): Completable {
+        TODO("Not yet implemented")
+    }
+
+    override fun min(): Completable {
+        TODO("Not yet implemented")
+    }
+
 
 }

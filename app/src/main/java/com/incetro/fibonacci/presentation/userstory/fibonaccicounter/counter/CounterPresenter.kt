@@ -7,7 +7,7 @@
 package com.incetro.fibonacci.presentation.userstory.fibonaccicounter.counter
 
 import com.incetro.fibonacci.common.navigation.AppRouter
-import com.incetro.fibonacci.model.interactor.FibonacciCounterInteractor
+import com.incetro.fibonacci.model.interactor.fibonacci.FibonacciCounterInteractor
 import com.incetro.fibonacci.presentation.base.fragment.BasePresenter
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers

@@ -103,15 +103,13 @@
 
         <Button
             android:id="@+id/btnStatistic"
-            android:layout_width="100dp"
-            android:layout_height="46dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="102dp"
             android:text="@string/statistic"
-            app:layout_constraintBottom_toBottomOf="@+id/tvCounter"
-            app:layout_constraintEnd_toStartOf="@+id/tvFib"
-            app:layout_constraintHorizontal_bias="0.184"
-            app:layout_constraintStart_toEndOf="@+id/tvFibTitle"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.501" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFibTitle" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

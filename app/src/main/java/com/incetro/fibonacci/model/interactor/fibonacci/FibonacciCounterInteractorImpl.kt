@@ -1,4 +1,4 @@
-package com.incetro.fibonacci.model.interactor
+package com.incetro.fibonacci.model.interactor.fibonacci
 
 import com.incetro.fibonacci.common.di.scope.FeatureScope
 import com.incetro.fibonacci.entity.fibonaccicounter.CounterInfo

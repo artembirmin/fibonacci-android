@@ -4,7 +4,7 @@
  * Created by artembirmin on 7/11/2022.
  */
 
-package com.incetro.fibonacci.presentation.userstory.fibonaccicounter.di
+package com.incetro.fibonacci.presentation.userstory.fibonaccicounter.di.counter
 
 import com.incetro.fibonacci.common.di.activity.ActivityComponent
 import com.incetro.fibonacci.common.di.componentmanager.ComponentManager
