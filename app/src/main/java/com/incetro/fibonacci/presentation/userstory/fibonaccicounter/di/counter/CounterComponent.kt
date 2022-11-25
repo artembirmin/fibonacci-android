@@ -11,6 +11,7 @@ import com.incetro.fibonacci.common.di.componentmanager.ComponentManager
 import com.incetro.fibonacci.common.di.componentmanager.ComponentsManager
 import com.incetro.fibonacci.common.di.scope.FeatureScope
 import com.incetro.fibonacci.presentation.userstory.fibonaccicounter.counter.CounterFragment
+import com.incetro.fibonacci.presentation.userstory.fibonaccicounter.statistic.StatisticFragment
 import dagger.Component
 
 @FeatureScope
@@ -22,6 +23,7 @@ import dagger.Component
 )
 interface CounterComponent {
     fun inject(counterFragment: CounterFragment)
+    fun inject(statisticFragment: StatisticFragment)
 
     @Component.Builder
     interface Builder {

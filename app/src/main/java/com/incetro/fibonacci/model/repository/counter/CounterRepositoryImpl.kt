@@ -3,12 +3,14 @@ package com.incetro.fibonacci.model.repository.counter
 import com.incetro.fibonacci.common.di.scope.FeatureScope
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.subjects.BehaviorSubject
 import javax.inject.Inject
 
 @FeatureScope
 class CounterRepositoryImpl @Inject constructor() : CounterRepository {
     private var counter: Int = 0
+    private var counterStatistics = CounterStatistics()
 
     private val counterObservable: BehaviorSubject<Int> = BehaviorSubject.create<Int>()
         .apply { onNext(counter) }
@@ -29,17 +31,11 @@ class CounterRepositoryImpl @Inject constructor() : CounterRepository {
         }
     }
 
-    override fun counterOfPressing(): Completable {
-        TODO("Not yet implemented")
+    override fun getStatistics(): Single<CounterStatistics> {
+        TODO()
     }
 
-    override fun max(): Completable {
-        TODO("Not yet implemented")
+    private fun updateStatistics() {
+
     }
-
-    override fun min(): Completable {
-        TODO("Not yet implemented")
-    }
-
-
 }
