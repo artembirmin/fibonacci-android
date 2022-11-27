@@ -7,7 +7,9 @@
 package com.incetro.fibonacci.presentation.userstory.fibonaccicounter.counter
 
 import com.incetro.fibonacci.common.navigation.AppRouter
+import com.incetro.fibonacci.common.navigation.Screens
 import com.incetro.fibonacci.model.interactor.fibonacci.FibonacciCounterInteractor
+import com.incetro.fibonacci.model.interactor.statistic.StatisticCounterInteractor
 import com.incetro.fibonacci.presentation.base.fragment.BasePresenter
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers
@@ -17,7 +19,7 @@ import javax.inject.Inject
 @InjectViewState
 class CounterPresenter @Inject constructor(
     private val router: AppRouter,
-    private val fibonacciCounterInteractor: FibonacciCounterInteractor
+    private val fibonacciCounterInteractor: FibonacciCounterInteractor,
 ) : BasePresenter<CounterView>() {
 
     override fun onFirstViewAttach() {
@@ -42,6 +44,10 @@ class CounterPresenter @Inject constructor(
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ }, { viewState.showError(it) })
             .addDisposable()
+    }
+
+    fun onStatisticClick(){
+        router.navigateTo(Screens.StatisticScreen())
     }
 
     override fun onBackPressed() {

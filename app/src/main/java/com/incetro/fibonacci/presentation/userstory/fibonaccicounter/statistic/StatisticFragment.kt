@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import com.incetro.fibonacci.R
 import com.incetro.fibonacci.databinding.FragmentStatisticBinding
+import com.incetro.fibonacci.entity.statistic.CounterStatistics
 import com.incetro.fibonacci.presentation.base.fragment.BaseFragment
 import com.incetro.fibonacci.presentation.userstory.fibonaccicounter.di.counter.CounterComponent
 import moxy.presenter.InjectPresenter
@@ -40,7 +41,11 @@ class StatisticFragment : BaseFragment<FragmentStatisticBinding>(), StatisticVie
         fun newInstance() = StatisticFragment()
     }
 
-    override fun showStatistic() {
-
+    override fun showStatistic(counterStatistics: CounterStatistics) {
+        with(binding) {
+            tvCountPressing.text = counterStatistics.counterOfPressing.toString()
+            tvMaxValue.text = counterStatistics.maxValue.toString()
+            tvMinValue.text = counterStatistics.minValue.toString()
+        }
     }
 }
