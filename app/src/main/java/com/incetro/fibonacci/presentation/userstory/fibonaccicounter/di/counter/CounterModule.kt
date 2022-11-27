@@ -9,6 +9,8 @@ package com.incetro.fibonacci.presentation.userstory.fibonaccicounter.di.counter
 import com.incetro.fibonacci.common.di.scope.FeatureScope
 import com.incetro.fibonacci.model.interactor.fibonacci.FibonacciCounterInteractor
 import com.incetro.fibonacci.model.interactor.fibonacci.FibonacciCounterInteractorImpl
+import com.incetro.fibonacci.model.interactor.statistic.StatisticCounterInteractor
+import com.incetro.fibonacci.model.interactor.statistic.StatisticCounterInteractorImpl
 import com.incetro.fibonacci.model.repository.counter.CounterRepository
 import com.incetro.fibonacci.model.repository.counter.CounterRepositoryImpl
 import com.incetro.fibonacci.model.repository.fibonacci.FibonacciRepository
@@ -31,4 +33,10 @@ abstract class CounterModule {
     abstract fun provideFibonacciCounterInteractor(
         fibonacciCounterInteractorImpl: FibonacciCounterInteractorImpl
     ): FibonacciCounterInteractor
+
+    @Binds
+    @FeatureScope
+    abstract fun provideStatisticCounterInteractor(
+        statisticCounterInteractorImpl: StatisticCounterInteractorImpl
+    ): StatisticCounterInteractor
 }

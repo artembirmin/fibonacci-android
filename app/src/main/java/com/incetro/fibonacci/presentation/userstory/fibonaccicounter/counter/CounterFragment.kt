@@ -40,11 +40,8 @@ class CounterFragment : BaseFragment<FragmentCounterBinding>(), CounterView {
         with(binding) {
             btnIncrement.setOnClickListener { presenter.onIncrementClick() }
             btnDecrement.setOnClickListener { presenter.onDecrementClick() }
+            btnStatistic.setOnClickListener { presenter.onStatisticClick() }
         }
-    }
-
-    private fun showStatistic() {
-        binding.btnStatistic.setOnClickListener({ presenter })
     }
 
     override fun showCounter(counterInfo: CounterInfo) {
