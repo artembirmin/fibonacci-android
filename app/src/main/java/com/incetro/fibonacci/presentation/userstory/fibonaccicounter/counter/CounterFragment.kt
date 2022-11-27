@@ -49,8 +49,11 @@ class CounterFragment : BaseFragment<FragmentCounterBinding>(), CounterView {
             tvCounter.text = counterInfo.counter.toString()
 
             val fibStatusResId =
-                if (counterInfo.isFibonacci) R.string.agreement
-                else R.string.disagreement
+                if (counterInfo.isFibonacci) {
+                    R.string.agreement
+                } else {
+                    R.string.disagreement
+                }
             tvFib.setText(fibStatusResId)
         }
     }
@@ -62,6 +65,4 @@ class CounterFragment : BaseFragment<FragmentCounterBinding>(), CounterView {
     companion object {
         fun newInstance() = CounterFragment()
     }
-
-
 }

@@ -7,5 +7,4 @@ interface CounterRepository {
     fun observeCounter(): Observable<Int>
     fun incrementCounter(): Completable
     fun decrementCounter(): Completable
-
 }

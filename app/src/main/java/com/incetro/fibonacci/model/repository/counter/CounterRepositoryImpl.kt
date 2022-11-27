@@ -28,6 +28,4 @@ class CounterRepositoryImpl @Inject constructor() : CounterRepository {
             counterObservable.onNext(--counter)
         }
     }
-
-
 }
