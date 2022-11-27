@@ -11,4 +11,14 @@
         <item name="android:textSize">20sp</item>
         <item name="fontFamily">sans-serif-medium</item>
     </style>
+
+    <style name="Text18Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">sans-serif</item>
+    </style>
+
+    <style name="Text18Black.Medium">
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
 </resources>

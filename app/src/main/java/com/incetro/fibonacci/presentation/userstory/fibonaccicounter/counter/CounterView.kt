@@ -6,11 +6,12 @@
 
 package com.incetro.fibonacci.presentation.userstory.fibonaccicounter.counter
 
+import com.incetro.fibonacci.entity.fibonaccicounter.CounterInfo
 import com.incetro.fibonacci.presentation.base.BaseView
 import moxy.viewstate.strategy.AddToEndSingleStrategy
 import moxy.viewstate.strategy.StateStrategyType
 
 @StateStrategyType(AddToEndSingleStrategy::class)
 interface CounterView : BaseView {
-
+    fun showCounter(counterInfo: CounterInfo)
 }
