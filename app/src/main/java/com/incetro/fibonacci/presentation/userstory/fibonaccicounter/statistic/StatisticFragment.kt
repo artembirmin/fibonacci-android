@@ -22,7 +22,7 @@ class StatisticFragment : BaseFragment<FragmentStatisticBinding>(), StatisticVie
     fun providePresenter(): StatisticPresenter = presenter
 
     override fun inject() = CounterComponent.Manager.getComponent().inject(this)
-    override fun release() = CounterComponent.Manager.releaseComponent()
+    override fun release() = Unit
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
