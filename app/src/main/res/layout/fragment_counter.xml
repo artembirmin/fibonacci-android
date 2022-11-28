@@ -37,8 +37,8 @@
 
         <TextView
             android:id="@+id/tvCounterTitle"
-            android:layout_width="69dp"
-            android:layout_height="26dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="296dp"
             android:gravity="center"

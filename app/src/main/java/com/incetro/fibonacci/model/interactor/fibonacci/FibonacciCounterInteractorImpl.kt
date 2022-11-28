@@ -31,6 +31,4 @@ class FibonacciCounterInteractorImpl @Inject constructor(
     override fun decrementCounter(): Completable {
         return counterRepository.decrementCounter()
     }
-
-
 }
