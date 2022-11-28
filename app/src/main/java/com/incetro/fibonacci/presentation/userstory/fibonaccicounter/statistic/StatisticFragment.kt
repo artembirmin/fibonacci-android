@@ -28,6 +28,13 @@ class StatisticFragment : BaseFragment<FragmentStatisticBinding>(), StatisticVie
         super.onViewCreated(view, savedInstanceState)
     }
 
+    override fun showStatistic(counterStatistics: CounterStatistics) {
+        with(binding) {
+            tvClicksCount.text = counterStatistics.clicksCount.toString()
+            tvMax.text = counterStatistics.maxValue.toString()
+            tvMin.text = counterStatistics.minValue.toString()
+        }
+    }
 
     override fun onBackPressed() {
         presenter.onBackPressed()
@@ -35,13 +42,5 @@ class StatisticFragment : BaseFragment<FragmentStatisticBinding>(), StatisticVie
 
     companion object {
         fun newInstance() = StatisticFragment()
-    }
-
-    override fun showStatistic(counterStatistics: CounterStatistics) {
-        with(binding) {
-            tvPress.text = counterStatistics.counterOfPressing.toString()
-            tvMaxValue.text = counterStatistics.maxValue.toString()
-            tvMinValue.text = counterStatistics.minValue.toString()
-        }
     }
 }

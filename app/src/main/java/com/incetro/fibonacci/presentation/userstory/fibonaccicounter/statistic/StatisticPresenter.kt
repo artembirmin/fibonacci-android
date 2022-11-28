@@ -14,7 +14,6 @@ class StatisticPresenter @Inject constructor(
     private val statisticCounterInteractor: StatisticCounterInteractor
 ) : BasePresenter<StatisticView>() {
 
-
     override fun onFirstViewAttach() {
         statisticCounterInteractor.getStatistics()
             .subscribeOn(Schedulers.io())
@@ -26,6 +25,4 @@ class StatisticPresenter @Inject constructor(
     override fun onBackPressed() {
         router.exit()
     }
-
-
 }

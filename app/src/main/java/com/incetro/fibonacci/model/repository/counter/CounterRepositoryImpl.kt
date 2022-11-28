@@ -11,7 +11,10 @@ import javax.inject.Inject
 @FeatureScope
 class CounterRepositoryImpl @Inject constructor() : CounterRepository {
     private var counter: Int = 0
-    private var counterStatistics = CounterStatistics(0, 0, 0)
+    private val counterStatistics = CounterStatistics()
+    private var maxValueCopy = 0
+    private var minValueCopy = 0
+    private var clicksCountCopy = 0
 
     private val counterObservable: BehaviorSubject<Int> = BehaviorSubject.create<Int>()
         .apply { onNext(counter) }
@@ -24,8 +27,8 @@ class CounterRepositoryImpl @Inject constructor() : CounterRepository {
         return Completable.fromAction {
             counterObservable.onNext(++counter)
             if (counter > counterStatistics.maxValue)
-                counterStatistics.maxValue = counter
-            updateStatistics()
+                maxValueCopy = counter
+            clicksCountCopy++
         }
     }
 
@@ -33,14 +36,17 @@ class CounterRepositoryImpl @Inject constructor() : CounterRepository {
         return Completable.fromAction {
             counterObservable.onNext(--counter)
             if (counter < counterStatistics.minValue)
-                counterStatistics.minValue = counter
-            updateStatistics()
+                minValueCopy = counter
+            clicksCountCopy++
         }
     }
 
     override fun getStatistics(): Single<CounterStatistics> {
-        return Single.just(counterStatistics)
+        return Single.just(
+            counterStatistics.copy(
+                maxValue = maxValueCopy, minValue = minValueCopy,
+                clicksCount = clicksCountCopy
+            )
+        )
     }
-
-    private fun updateStatistics() = counterStatistics.counterOfPressing++
 }

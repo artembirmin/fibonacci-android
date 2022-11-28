@@ -62,6 +62,4 @@ class CounterFragment : BaseFragment<FragmentCounterBinding>(), CounterView {
     companion object {
         fun newInstance() = CounterFragment()
     }
-
-
 }

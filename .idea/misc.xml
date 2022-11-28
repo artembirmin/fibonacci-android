@@ -4,16 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/USERS/DIMA/fibonacci-android/app/src/main/res/layout/fragment_counter.xml" value="0.2767210144927536" />
-        <entry key="..\:/USERS/DIMA/fibonacci-android/app/src/main/res/layout/fragment_statistic.xml" value="0.33" />
-        <entry key="..\:/USERS/DIMA/fibonacci-android/app/src/main/res/layout/layout_container.xml" value="0.25" />
-        <entry key="..\:/USERS/DIMA/fibonacci-android/app/src/main/res/layout/statistic_layout.xml" value="0.22" />
+        <entry key="..\:/USERS/DIMA/fibonacci-android/app/src/main/res/layout/layout_container.xml" value="0.2767210144927536" />
         <entry key="..\:/Users/petra/INCETRO/ProjectTemplate/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/petra/INCETRO/ProjectTemplate/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/petra/INCETRO/ProjectTemplate/app/src/main/res/layout/fragment_demo.xml" value="0.2" />
         <entry key="..\:/Users/petra/INCETRO/ProjectTemplate/app/src/main/res/layout/layout_container.xml" value="0.3138888888888889" />
         <entry key="..\:/Users/petra/INCETRO/fibonacci-android/app/src/main/res/layout/fragment_demo.xml" value="0.3026041666666667" />
-        <entry key="..\:/fibonacci-android/app/src/main/res/layout/fragment_counter.xml" value="0.22826086956521738" />
-        <entry key="..\:/fibonacci-android/app/src/main/res/layout/fragment_statistic.xml" value="0.264" />
+        <entry key="..\:/fibonacci-android/app/src/main/res/layout/fragment_counter.xml" value="0.11302083333333333" />
+        <entry key="..\:/fibonacci-android/app/src/main/res/layout/fragment_statistic.xml" value="0.1" />
       </map>
     </option>
   </component>
